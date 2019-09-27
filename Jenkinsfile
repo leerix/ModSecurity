@@ -92,7 +92,7 @@ pipeline {
                     "BUILD_STATUS": "${currentBuild.currentResult}",
                     "DOCKER_REGISTRY": "${PREFIX}.seedlinktech.com:443",
                     "DOCKER_TAG": "${env.GIT_LOCAL_BRANCH}_${env.GIT_COMMIT}",
-                    "APP_NAME": "waf(mod security3)"
+                    "APP_NAME": "waf(mod security3)",
                     "GIT_COMMIT" :env.GIT_COMMIT,
                     "PREVIOUS_COMMIT":env.GIT_PREVIOUS_COMMIT,
                     "GIT_URL":env.GIT_URL,
@@ -111,7 +111,7 @@ pipeline {
                     "BUILD_STATUS": "${currentBuild.currentResult}",
                     "DOCKER_REGISTRY": "${PREFIX}.seedlinktech.com:443",
                     "DOCKER_TAG": "${env.GIT_LOCAL_BRANCH}_${env.GIT_COMMIT}",
-                    "APP_NAME": "osqa_base,base_env,postgresql,app_data",
+                    "APP_NAME": "waf(modsecurity3)",
                     "GIT_COMMIT" :env.GIT_COMMIT,
                     "PREVIOUS_COMMIT":env.GIT_PREVIOUS_COMMIT,
                     "GIT_URL":env.GIT_URL,
