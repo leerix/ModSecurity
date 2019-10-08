@@ -69,6 +69,9 @@ pipeline {
                     steps {
                         sh '''
                               echo 'start build seedlink waf'
+
+                              git submodule init
+                              git submodule update
                               docker build --force-rm --build-arg DOCKER_GITCOMMIT=${GIT_COMMIT} --build-arg DOCKER_PREFIX=${PREFIX} \
                                      -t ${PREFIX}.seedlinktech.com:443/waf:${GIT_LOCAL_BRANCH}_${GIT_COMMIT} .
                               docker tag ${PREFIX}.seedlinktech.com:443/waf:${GIT_LOCAL_BRANCH}_${GIT_COMMIT} \
